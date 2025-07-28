@@ -2,15 +2,19 @@
 
 import math
 
-n = []
-n = (n-1) + (n-2)
-
-
 def numLength(n):
     return len(str(n))
+
+x, y = 1, 1
+
+while numLength(y) < 1000:
+    x, y = y, x + y
+
+n = y
+
 digits = [int(digit) for digit in str(n)]
 
-if digits == 1000:
+if len(digits) == 1000:
     print("The first term in the Fibonacci sequence to contain 1000 digits is:", n)
 else:
     print("No term in the Fibonacci sequence contains 1000 digits.")
